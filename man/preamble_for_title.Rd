@@ -4,7 +4,47 @@
 \alias{preamble_for_title}
 \title{Preamble for Title Page}
 \usage{
-preamble_for_title(file = "preamble.tex")
+preamble_for_title(covertitle, abstracttitle, author, department,
+  narrowdepartment, degreetype, degreemonth, degreeyear, chair, committee,
+  graddean, abstract_tex = NULL, cv_tex = NULL, acknowledge_tex = NULL,
+  dedication_tex = NULL,
+  preamble_template_tex = "0_uothesisapa_preamble.tex",
+  preamble_tex = "preamble.tex")
+}
+\arguments{
+\item{covertitle}{covertitle}
+
+\item{abstracttitle}{abstracttitle}
+
+\item{author}{author}
+
+\item{department}{department}
+
+\item{narrowdepartment}{narrowdepartment}
+
+\item{degreetype}{degreetype}
+
+\item{degreemonth}{degreemonth}
+
+\item{degreeyear}{degreeyear}
+
+\item{chair}{chair}
+
+\item{committee}{committee}
+
+\item{graddean}{graddean}
+
+\item{abstract_tex}{abstract_tex}
+
+\item{cv_tex}{cv_tex}
+
+\item{acknowledge_tex}{acknowledge_tex}
+
+\item{dedication_tex}{dedication_tex}
+
+\item{preamble_template_tex}{preamble_template_tex}
+
+\item{preamble_tex}{preamble_tex}
 }
 \description{
 Creates the preamble.tex file for the title page to work

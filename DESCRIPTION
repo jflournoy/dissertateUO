@@ -1,6 +1,6 @@
-Package: dissertateUSU
+Package: dissertateUO
 Type: Package
-Title: DissertateUSU
+Title: dissertateUO
 Version: 0.1.0
 Authors@R: c(person("Tyson S.", "Barrett",  
                     role=c("aut","cre"), 
