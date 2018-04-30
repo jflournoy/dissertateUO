@@ -38,10 +38,10 @@ dissertateUO::preamble_for_title(
            Severus Snape    & Core Member \\\\
            Sirius Black & Institutional Representative \\\\',
   graddean = 'Scott L. Pratt',
-  abstract_tex = 'Abstract_Section.md.tex',
+  abstract_tex = 'abstract.tex',
   cv_tex = 'cv.tex',
-  acknowledge_tex = 'Acknowledgements_Section.md.tex',
-  dedication_tex = 'Dedication_Section.md.tex')
+  acknowledge_tex = 'acknowledgements.tex',
+  dedication_tex = 'dedication.tex')
 ```
 
 <!-- Begin Document -->
@@ -55,6 +55,13 @@ Introduce the thing, which is about values [@schwartz_overview_2012].
 ```{r fig.width=5, fig.height=5, fig.cap='This is a fun caption'}
 hist(rnorm(1e3))
 ```
+
+It can also be helpful to separate your chapters out into separate Rmd files, as [demonstrated by Tyson Barrett](http://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/). That would look something like adding the following R chunk:
+
+````r
+`r ''````{r child = "introduction.Rmd"}
+```
+````
 
 \FloatBarrier
 
