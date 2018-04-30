@@ -1,25 +1,18 @@
 ---
-documentclass: DissertateUSU
-title: 'Dissertating for USU'
-author: You
+documentclass: uothesisapa
+classoption: dissertation, copyright, final
+biblio-style: apacite
+title: "The Main Title of the Dissertation: The Subtitle of the Dissertation" #for pdf meta-data
+author: "Hermione Granger" #for pdf meta-data
 output:
   pdf_document:
     latex_engine: xelatex
     includes:
-      in_header: preamble.tex
+      in_header: "preamble.tex"
+    template: "default-1.17.0.2_notitling.tex"
+    citation_package: "natbib"
     keep_tex: yes
-geometry: [top=1in, bottom=1in, right=1in, left=1.5in]
-params:
-  year: '2018'
-  degree: 'Degree'
-  field: 'Field'
-  chair: 'Chair Person'
-  committee1: 'Committee Member 1'
-  committee2: 'Committee Member 2'
-  committee3: 'Committee Member 3'
-  committee4: 'Committee Member 4'
-  gradschool: 'The Graduate School Individual'
-    
+bibliography: "dissertation"
 ---
 
 ```{r global_options, include=FALSE}
@@ -28,145 +21,71 @@ knitr::opts_chunk$set(fig.path = 'figures/',
                       echo = FALSE, 
                       warning = FALSE, 
                       message = FALSE)
-## Do NOT Remove
-dissertateUSU::preamble_for_title()
+
+#This is where you set all of the information that will be printed. The title
+#and the author in the YAML above is just for PDF metadata
+dissertateUO::preamble_for_title(
+  covertitle = 'The Main Title of the Dissertation: The Subtitle of the Dissertation',
+  abstracttitle = 'The Main Title of the Dissertation: The Subtitle of the Dissertation',
+  author = 'Hermione Granger',
+  department = 'Department of Psychology',
+  narrowdepartment = 'Department of Psychology',
+  degreetype = 'Master of Philosophy',
+  degreemonth = 'December',
+  degreeyear = '2016',
+  chair = 'Albus Dumbledore',
+  committee = 'Minerva McGonagall    & Core Member \\\\
+           Severus Snape    & Core Member \\\\
+           Sirius Black & Institutional Representative \\\\',
+  graddean = 'Scott L. Pratt',
+  abstract_tex = 'Abstract_Section.md.tex',
+  cv_tex = 'cv.tex',
+  acknowledge_tex = 'Acknowledgements_Section.md.tex',
+  dedication_tex = 'Dedication_Section.md.tex')
 ```
 
-<!-- Title page printed automatically -->
-\pagenumbering{roman}
-\pagestyle{empty}
-\copyrightpage
-
-<!-- Abstract -->
-\newpage
-\pagestyle{fancy}
-\fancyhead[L]{Abstract}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\chapter*{ABSTRACT}
-\addcontentsline{toc}{section}{Abstract}
-
-Abstract words.
-
-<!-- Public Abstract -->
-\newpage
-\fancyhead[L]{Public Abstract}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\chapter*{PUBLIC ABSTRACT}
-\addcontentsline{toc}{section}{Public Abstract}
-
-Publically abstracted words.
-
-<!-- Dedication -->
-\newpage
-\fancyhead[L]{Dedication}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\chapter*{DEDICATION}
-\addcontentsline{toc}{section}{Dedication}
-
-Dedicate it.
-
-<!-- Acknowledgements -->
-\newpage
-\fancyhead[L]{Acknowledgments}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\chapter*{ACKNOWLEDGEMENTS}
-\addcontentsline{toc}{section}{Acknowledgments}
-
-Acknowledge them.
-
-<!-- Front Matter -->
-\newpage
-\fancyhead[L]{Table of Contents}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\tableofcontents
-
-\newpage
-\fancyhead[L]{List of Tables}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\listoftables
-
-\newpage
-\fancyhead[L]{List of Figures}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\listoffigures
-
-
-\newpage
-\pagenumbering{arabic}
+<!-- Begin Document -->
 
 <!-- Introduction -->
-\newpage
-\fancyhead[L]{Introduction}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
 
 \chapter{INTRODUCTION}
 
-Introduce the thing.
+Introduce the thing, which is about values [@schwartz_overview_2012].
+
+```{r fig.width=5, fig.height=5, fig.cap='This is a fun caption'}
+hist(rnorm(1e3))
+```
 
 \FloatBarrier
 
 <!-- Chapter 2 -->
-\newpage
-\fancyhead[L]{Chapter 2's Title}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
+\chapter{Methodology}
 
-\chapter{Chapter 2's Title}
+drone marketing vinyl ablative ablative j-pop -ware spook urban pistol euro-pop sub-orbital youtube Chiba cardboard camera. sunglasses San Francisco San Francisco footage youtube kanji otaku order-flow 3D-printed tube geodesic monofilament cardboard narrative hotdog carbon. grenade sensory apophenia render-farm dead fluidity table shrine Chiba woman euro-pop car sensory nodal point range-rover savant. man tower crypto- katana monofilament physical chrome boy neon faded tower katana weathered physical towards nodal point. 
 
-Tells us more.
+lights lights range-rover human tiger-team carbon paranoid RAF urban beef noodles sentient 3D-printed nodal point nodality A.I. dolphin. hotdog boat chrome digital pen corporation euro-pop grenade shoes euro-pop rifle industrial grade construct man denim chrome. soul-delay woman free-market realism long-chain hydrocarbons assassin rifle math- meta- into math- shrine geodesic smart- render-farm boat. 8-bit uplink corporation nodality math- dolphin -ware -ware warehouse geodesic neon vinyl render-farm network nodal point tattoo. 
+
+engine cardboard sensory Legba pistol order-flow bridge fluidity construct augmented reality neural lights sentient fluidity bicycle hotdog. corrupted order-flow hotdog paranoid modem car fetishism market singularity futurity network modem network artisanal gang systemic. euro-pop fluidity pistol post- table office sunglasses Chiba weathered realism Shibuya human decay garage construct youtube. A.I. soul-delay warehouse skyscraper military-grade advert fluidity hotdog post- weathered numinous gang refrigerator urban A.I. systemic. 
+
+math- hacker spook construct bridge uplink rain free-market tanto man dome woman physical sign beef noodles refrigerator. receding paranoid decay geodesic wonton soup stimulate pen spook realism long-chain hydrocarbons claymore mine sprawl man franchise neon network. ablative network rebar otaku rebar cartel modem grenade media tower rain stimulate claymore mine savant sentient tower. -ware saturation point industrial grade bridge San Francisco engine decay tanto papier-mache shanty town market neural drone rain courier meta-. 
 
 \FloatBarrier
 
 <!-- Chapter 3 -->
-\newpage
-\fancyhead[L]{Chapter 3's Title}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-
-\chapter{Chapter 3's Title}
+\chapter{ Results}
 
 Don't stop now.
 
+```{r}
+knitr::kable(data.frame('things I am about' = c('dogs', 'cats', 'ice cream'),
+                        'mean of things' = rnorm(3)),
+             caption = 'Fun things are really something!')
+```
 
 \FloatBarrier
-\newpage
-\fancyhead[L]{Chapter 4's Title}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
 
-\chapter{Chapter 4's Title}
+<!-- Chapter 4 -->
+\chapter{ Discussion}
 
 Keep it going.
 
-
-\FloatBarrier
-\newpage
-\fancyhead[L]{Chapter 5's Title}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-
-\chapter{Chapter 5's Title}
-
-Well done.
-
-\FloatBarrier
-
-\newpage
-\fancyhead[L]{References}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-
-\chapter*{REFERENCES}
-
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.4in}
-\setlength{\parskip}{6pt}
-\noindent
